@@ -19,7 +19,7 @@ const useGif = (tag) => {
         setLoading(true);
 
         // const output = await axios.get(tag ? tagMemeUrl : randomMemeUrl);
-        const output = await axios.get(tag ? `url&tag=${tag}` : url);
+        const output = await axios.get(tag ? `${url}&tag=${tag}` : url);
         console.log(output);
 
         const imageSource = output?.data?.data?.images?.downsized_large?.url;
